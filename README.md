@@ -7,8 +7,10 @@ Implementation of BFloat16 (ADDITION & SUBRACTION) using Verilog HDL.
 - bfloat16_tb
 
 ## Features
-- Floating point representation
-- Testbench included
+- Bfloat16 data format representation 
+- addition/subtraction
+- verilog based hardware design 
+- Testbench for verification 
 
 ## Tools Used
 - Verilog HDL
