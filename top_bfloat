@@ -1,0 +1,45 @@
+module top_bfloat(
+
+    input clk,
+    input [15:0] sw,       // sw[15]=load, sw[14:13]=sel, sw[12:0]=data
+    output [15:0] led
+);
+
+    reg [15:0] a = 0, b = 0;
+    reg op=0;
+    //reg load_prev = 0;
+    //wire ctrl_load;
+    wire [1:0] ctrl_sel;
+    wire [15:0] data;
+
+    wire [15:0] result;
+   //wire clk1Hz;
+  //clk_div cl0 (.clk(clk), .clk1Hz(clk1Hz));
+    // Control signals
+   // assign ctrl_load = sw[15];
+    assign ctrl_sel  = sw[15:14];
+
+    // bfloat16 mapping with mantissa LSB padding
+    assign data = {sw[13], sw[12:5], sw[4:0], 2'b00};
+
+    // Instantiate core
+    bfloat_16 uut (
+        .a(a),
+        .b(b),
+        .op(op),
+        .result(result)
+    );
+
+    // Edge detection
+    always @(posedge clk) begin
+            case (ctrl_sel)
+                2'b00: a <= data;
+                2'b01: b <= data;
+                2'b10: op <= sw[0];   // operation from LSB
+            endcase
+        end
+
+
+    assign led = result;
+
+endmodule

@@ -1,4 +1,20 @@
 # Project-Bfloat
- first digital electronics project (Bfloat) and first repository.
- Author - Amulya(24EC01017) , Manogna(24EC01027)
- 
+Implementation of BFloat16 using Verilog HDL.
+
+## Files
+- top_bfloat
+- bfloat_16
+- bfloat16_tb
+
+## Features
+- Floating point representation
+- Testbench included
+
+## Tools Used
+- Verilog HDL
+- VS Code
+- GitHub
+
+## Authors
+- Amulya
+- Manogana
