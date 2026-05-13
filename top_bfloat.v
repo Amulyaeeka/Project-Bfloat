@@ -32,7 +32,7 @@ module top_bfloat(
 
     // Edge detection
     always @(posedge clk) begin
-            case (ctrl_sel)
+            case(ctrl_sel)
                 2'b00: a <= data;
                 2'b01: b <= data;
                 2'b10: op <= sw[0];   // operation from LSB

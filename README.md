@@ -1,5 +1,5 @@
 # Project-Bfloat
-Implementation of BFloat16 using Verilog HDL.
+Implementation of BFloat16 (ADDITION & SUBRACTION) using Verilog HDL.
 
 ## Files
 - top_bfloat
