@@ -19,4 +19,4 @@ Implementation of BFloat16 (ADDITION & SUBRACTION) using Verilog HDL.
 
 ## Authors
 - Amulya(24ECO1017)
-- Manogana(24EC01027)
+- Manogna(24EC01027)
